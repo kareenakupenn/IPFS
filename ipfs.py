@@ -6,12 +6,12 @@ def pin_to_ipfs(data):
 	  #YOUR CODE HERE
     pinata_url = "https://api.pinata.cloud/pinning/pinJSONToIPFS"
   
-     headers = {
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiI4ODc4YjEwNS0yYTU1LTRlNjgtOGJjNC02MWRlZGM4Mzc4OTIiLCJlbWFpbCI6ImthcmVlbmFrQGVuZ2luZWVyaW5nLnVwZW5uLmVkdSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6IkZSQTEifSx7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6Ik5ZQzEifV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiIzMGJmZWNkMzNlNWM4OTBiMzMxZSIsInNjb3BlZEtleVNlY3JldCI6ImM0YmI0OTk1OTU2YzIwNDFlNzgzMzg5YjNmZjMyNmRjYzQwNWZlZjhkYmUwZDhiYzJiOTA0OGFkNmEzOWI2MGUiLCJleHAiOjE4MjM1NjgwMjZ9.vjRiZDeHi-kVnpsmr-SJk9yI99o4F0EneQCGR2VH7tc",
-      "Content-Type": "application/json"
+    headers = {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiI4ODc4YjEwNS0yYTU1LTRlNjgtOGJjNC02MWRlZGM4Mzc4OTIiLCJlbWFpbCI6ImthcmVlbmFrQGVuZ2luZWVyaW5nLnVwZW5uLmVkdSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6IkZSQTEifSx7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6Ik5ZQzEifV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiIzMGJmZWNkMzNlNWM4OTBiMzMxZSIsInNjb3BlZEtleVNlY3JldCI6ImM0YmI0OTk1OTU2YzIwNDFlNzgzMzg5YjNmZjMyNmRjYzQwNWZlZjhkYmUwZDhiYzJiOTA0OGFkNmEzOWI2MGUiLCJleHAiOjE4MjM1NjgwMjZ9.vjRiZDeHi-kVnpsmr-SJk9yI99o4F0EneQCGR2VH7tc",
+        "Content-Type": "application/json"
     }
     payload = {
-      "pinataContent": data
+        "pinataContent": data
     }
     
     response = requests.post(pinata_url, json=payload, headers=headers)
